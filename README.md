@@ -4,7 +4,7 @@ Application PWA pour l'enregistrement des entreprises en Côte d'Ivoire.
 
 ## 🌐 Voir la présentation en ligne
 
-[Accéder à la présentation](https://votre-username.github.io/cepici)
+[Accéder à la présentation](https://jhouedanou.github.io/cepici)
 
 ## 📦 Prototype Figma
 
