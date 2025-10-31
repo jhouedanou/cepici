@@ -1,0 +1,1612 @@
+ ---
+marp: true
+theme: default
+paginate: true
+transition: slide
+backgroundColor: #fff
+backgroundImage: url('https://marp.app/assets/hero-background.svg')
+header: 'CEPICI Digital - Application PWA'
+footer: '© 2025 - Solution d\'enregistrement des entreprises'
+---
+
+<!-- _class: lead -->
+
+# CEPICI Digital
+## Application PWA pour l'enregistrement des entreprises en Côte d'Ivoire
+
+### Une solution moderne pour faciliter l'entrepreneuriat
+
+![bg right:40% 80%](https://placeholder.co/400x400/2E7D32/FFFFFF/png?text=CEPICI)
+
+---
+
+# 📋 Sommaire
+
+1. **Qu'est-ce que le CEPICI ?**
+2. **Les défis actuels**
+3. **Benchmark des solutions en Afrique de l'Ouest**
+4. **Notre solution : CEPICI Digital PWA**
+5. **Fonctionnalités clés**
+6. **Architecture technique**
+7. **Roadmap de développement**
+
+---
+
+# 🏢 Qu'est-ce que le CEPICI ?
+
+**Centre de Promotion des Investissements en Côte d'Ivoire**
+
+- Créé en 1993 par décret présidentiel
+- Restructuré en 2012 comme **Guichet Unique** de l'investissement
+- Missions principales :
+  - 📝 Faciliter la création d'entreprises
+  - 💼 Promouvoir les investissements (nationaux et étrangers)
+  - 🤝 Améliorer l'environnement des affaires
+  - ✅ Délivrer les agréments à l'investissement
+
+---
+
+# 📊 Impact du CEPICI
+
+**Résultats impressionnants :**
+
+- 42% du total des investissements du secteur privé captés (PND 2012-2015)
+- 1 828 milliards FCFA d'investissements
+- 239 entreprises approuvées en 2019
+- 729,7 milliards FCFA d'investissements en 2019 (+3,7% vs 2018)
+
+**Classement Doing Business 2020 : 110ème mondial** 
+(+12 places en un an)
+
+---
+
+# 🚧 Les défis actuels
+
+### Problèmes identifiés :
+
+❌ **Processus complexe** - Multiples démarches administratives
+❌ **Manque de visibilité** - Difficulté à connaître la disponibilité des noms
+❌ **Délais longs** - Temps d'attente pour les enregistrements
+❌ **Informations dispersées** - Documentation non centralisée
+❌ **Accessibilité limitée** - Nécessité de se déplacer physiquement
+
+---
+
+# 🌍 Benchmark : Afrique de l'Ouest
+
+## 1. 🇬🇭 Ghana - Leader régional
+
+**Ghana Registrar General's Department**
+- ✅ Enregistrement 100% en ligne
+- ✅ Plateforme e-Business (via GCNet)
+- ✅ Certificat électronique (e-Certificate)
+- ✅ Recherche de nom en ligne
+- ✅ Paiement intégré (Mobile Money + Cartes)
+- 💰 Coût : 60 GHS (~10 000 FCFA)
+
+---
+
+# 🌍 Benchmark (suite)
+
+## 2. 🇸🇳 Sénégal
+
+**Application Sénégal Services**
+- Documentation sur les démarches administratives
+- Annuaire des services de l'administration
+- Textes de référence et formulaires
+- Portail senegalservices.sn
+
+**Limitation :** Principalement informatif, enregistrement limité
+
+---
+
+# 🌍 Benchmark (suite)
+
+## 3. Autres pays OHADA
+
+**Situation générale :**
+- Benin, Burkina-Faso, Cameroun, Mali, Niger, Togo...
+- Enregistrement en ligne limité ou inexistant
+- Dépendance aux démarches physiques
+- Systèmes non harmonisés
+
+**Opportunité :** La Côte d'Ivoire peut se positionner comme leader avec le CEPICI
+
+---
+
+# 💡 Notre solution : CEPICI Digital PWA
+
+## Progressive Web App (PWA) avec Flutter
+
+### Avantages d'une PWA :
+
+✅ **Installation facile** - Sans passer par l'App Store/Play Store
+✅ **Fonctionnement offline** - Consultation des infos sans internet
+✅ **Mises à jour automatiques** - Toujours la dernière version
+✅ **Léger** - Moins d'espace de stockage nécessaire
+✅ **Cross-platform** - Android, iOS, Desktop, Web
+
+---
+
+# 🎯 Fonctionnalités clés
+
+## 1. Recherche et réservation de nom
+
+- 🔍 Vérification instantanée de disponibilité
+- 💾 Réservation de nom d'entreprise
+- 📊 Suggestions de noms alternatifs
+- ⏱️ Historique des recherches
+
+---
+
+# 🎯 Fonctionnalités clés
+
+## 2. Enregistrement guidé
+
+- 📝 Formulaires intelligents étape par étape
+- 📤 Upload de documents (CNI, justificatifs)
+- ✅ Validation en temps réel
+- 💾 Sauvegarde automatique de la progression
+
+---
+
+# 🎯 Fonctionnalités clés
+
+## 3. Suivi de dossier
+
+- 📍 Tracking en temps réel du statut
+- 🔔 Notifications push sur les changements
+- 📄 Téléchargement des documents officiels
+- 💬 Messagerie avec l'administration
+
+---
+
+# 🎯 Fonctionnalités clés
+
+## 4. Centre d'informations
+
+- 📚 Guide complet de l'entrepreneur
+- 💰 Simulateur de coûts et délais
+- 📋 Checklist des documents requis
+- ❓ FAQ interactive
+- 📞 Coordonnées et horaires des guichets
+
+---
+
+# 🎯 Fonctionnalités clés
+
+## 5. Paiement intégré
+
+- 💳 Mobile Money (MTN, Orange, Moov)
+- 🏦 Cartes bancaires
+- 🧾 Génération automatique de reçus
+- 📊 Historique des paiements
+
+---
+
+# 🏗️ Architecture technique
+
+## Stack technologique
+
+```
+Frontend:
+├── Flutter 3.x (PWA)
+├── Material Design 3
+├── Provider / Riverpod (State Management)
+└── Flutter Secure Storage
+
+Backend:
+├── Firebase / Node.js + Express
+├── PostgreSQL / Cloud Firestore
+└── API RESTful
+
+Services:
+├── Paiement : CinetPay / KkiaPay / FeexPay
+├── Authentification : Firebase Auth
+└── Stockage : Firebase Storage / AWS S3
+```
+
+---
+
+# 🏗️ Architecture - Schéma
+
+```
+┌─────────────────────────────────────┐
+│      CEPICI Digital PWA             │
+│         (Flutter Web)               │
+└──────────────┬──────────────────────┘
+               │
+       ┌───────┴───────┐
+       │               │
+┌──────▼─────┐  ┌─────▼──────┐
+│  Firebase  │  │   Backend  │
+│   Suite    │  │  API REST  │
+└──────┬─────┘  └─────┬──────┘
+       │               │
+┌──────▼───────────────▼──────┐
+│  Base de données             │
+│  (Firestore / PostgreSQL)    │
+└──────────────────────────────┘
+```
+
+---
+
+# 📱 Écrans principaux - Vue d'ensemble
+
+1. **Onboarding** - Introduction à l'app
+2. **Authentification** - Connexion/Inscription
+3. **Accueil (Dashboard)** - Vue d'ensemble
+4. **Recherche de nom** - Vérification disponibilité
+5. **Formulaire d'enregistrement** - Multi-étapes
+6. **Suivi de dossier** - Statut et documents
+7. **Profil utilisateur** - Informations personnelles
+8. **Paiement** - Intégration agrégateurs
+
+---
+
+# 🎨 Design System - Couleurs
+
+## Palette principale (Identité CEPICI)
+
+```css
+Couleur primaire : #1B5E20 (Vert foncé)
+Couleur secondaire : #4CAF50 (Vert CEPICI)
+Couleur accent : #FF9800 (Orange)
+Fond : #FFFFFF
+Fond secondaire : #F5F5F5
+Texte principal : #212121
+Texte secondaire : #757575
+Erreur : #D32F2F
+Succès : #388E3C
+Warning : #F57C00
+```
+
+---
+
+# 🎨 Design System - Typographie
+
+## Police recommandée : Inter / Roboto
+
+```
+Titre H1 : 32px - Bold
+Titre H2 : 24px - SemiBold
+Titre H3 : 20px - SemiBold
+Body Large : 16px - Regular
+Body : 14px - Regular
+Caption : 12px - Regular
+Button : 16px - Medium
+```
+
+---
+
+# 📱 Écran 1 : Onboarding
+
+**Objectif :** Présenter l'app aux nouveaux utilisateurs
+
+**Contenu :**
+- 3-4 slides avec illustrations
+- Bénéfices clés de l'application
+- Bouton "Commencer" vers l'inscription
+- Option "Passer" pour les utilisateurs pressés
+
+**Éléments UI :**
+- ViewPager / PageView horizontal
+- Indicateurs de page (dots)
+- Illustrations vectorielles modernes
+
+---
+
+# 📱 Écran 2 : Authentification
+
+## Page de connexion
+
+**Champs :**
+- Numéro de téléphone / Email
+- Mot de passe
+- Case "Se souvenir de moi"
+- Lien "Mot de passe oublié ?"
+
+**Actions :**
+- Bouton "Se connecter"
+- Lien vers inscription
+- Connexion sociale (Google, Apple)
+
+---
+
+# 📱 Écran 3 : Inscription
+
+**Étape 1 : Informations personnelles**
+- Nom complet
+- Numéro de téléphone (avec vérification OTP)
+- Email
+- Mot de passe (avec indicateur de force)
+
+**Étape 2 : Vérification**
+- Code OTP par SMS
+- Conditions générales d'utilisation (checkbox)
+
+---
+
+# 📱 Écran 4 : Accueil (Dashboard)
+
+**En-tête :**
+- Message de bienvenue personnalisé
+- Notifications (badge)
+
+**Actions rapides (Cards) :**
+- 🔍 Rechercher un nom d'entreprise
+- 📝 Créer une entreprise
+- 📊 Suivre mon dossier
+- 💰 Effectuer un paiement
+
+**Informations :**
+- Statut des dossiers en cours
+- Dernières actualités du CEPICI
+
+---
+
+# 📱 Écran 5 : Recherche de nom
+
+**Fonctionnalités :**
+- Champ de recherche avec suggestions
+- Filtres (type d'entreprise, secteur)
+- Résultats en temps réel :
+  - ✅ Disponible (avec bouton "Réserver")
+  - ❌ Non disponible
+  - ⚠️ Similaire (suggestions alternatives)
+
+**Informations additionnelles :**
+- Règles de nommage
+- Exemples de noms valides
+- Coût de réservation
+
+---
+
+# 📱 Écran 6 : Formulaire d'enregistrement
+
+**Navigation multi-étapes avec stepper**
+
+**Étape 1 :** Type d'entreprise
+- SARL, SA, SARLU, Entreprise individuelle, etc.
+
+**Étape 2 :** Informations générales
+- Nom commercial, Siège social, Secteur d'activité
+
+**Étape 3 :** Actionnaires/Associés
+- Ajout dynamique de personnes
+- Pourcentages de parts
+
+---
+
+# 📱 Écran 6 : Formulaire (suite)
+
+**Étape 4 :** Documents
+- Upload de pièces justificatives
+- Prévisualisation des documents
+- Validation du format
+
+**Étape 5 :** Récapitulatif
+- Résumé de toutes les informations
+- Modification possible (retour)
+- Calcul des frais
+- Bouton "Soumettre"
+
+**UX :** 
+- Sauvegarde automatique
+- Indicateur de progression
+
+---
+
+# 📱 Écran 7 : Paiement
+
+**Options de paiement :**
+- 📱 Mobile Money
+  - MTN Mobile Money
+  - Orange Money
+  - Moov Money
+- 💳 Carte bancaire (VISA, Mastercard)
+- 🏦 Virement bancaire
+
+**Processus :**
+1. Sélection du mode de paiement
+2. Saisie des informations
+3. Confirmation
+4. Reçu électronique
+
+---
+
+# 📱 Écran 8 : Suivi de dossier
+
+**Timeline visuelle :**
+- ✅ Dossier soumis
+- ⏳ En cours de traitement
+- 🔍 Vérification documents
+- ✅ Approuvé / ❌ Rejet (avec motif)
+- 📄 Certificat disponible
+
+**Actions :**
+- Télécharger les documents
+- Contacter le support
+- Voir l'historique complet
+- Notifications push sur changements
+
+---
+
+# 📱 Écran 9 : Profil utilisateur
+
+**Sections :**
+- **Informations personnelles** (éditable)
+  - Photo de profil
+  - Nom, téléphone, email
+  
+- **Mes entreprises**
+  - Liste des entreprises créées
+  - Statuts
+  
+- **Paramètres**
+  - Notifications
+  - Langue (Français / Anglais)
+  - Thème (clair/sombre)
+
+---
+
+# 📱 Écran 10 : Centre d'aide
+
+**Contenu :**
+- 📚 Guide de l'entrepreneur
+  - Comment créer une entreprise ?
+  - Quels documents préparer ?
+  - Combien ça coûte ?
+  - Combien de temps ça prend ?
+
+- ❓ FAQ
+  - Questions fréquentes par catégorie
+  - Recherche dans la FAQ
+
+- 📞 Contact
+  - Chat en direct
+  - Email, Téléphone
+  - Localisation des guichets
+
+---
+
+# 🎨 Guide Figma - Composants réutilisables
+
+## Boutons
+
+**Primary Button**
+- Background : Vert CEPICI (#4CAF50)
+- Texte : Blanc (#FFFFFF)
+- Border-radius : 8px
+- Padding : 16px vertical, 32px horizontal
+- États : Normal, Hover, Pressed, Disabled
+
+**Secondary Button**
+- Background : Transparent
+- Border : 2px solid Vert CEPICI
+- Texte : Vert CEPICI
+
+---
+
+# 🎨 Guide Figma - Composants (suite)
+
+## Input Fields
+
+**Text Input**
+- Border : 1px solid #E0E0E0
+- Border-radius : 8px
+- Padding : 12px
+- Focus : Border vert CEPICI + shadow
+- Error : Border rouge + message
+
+**Search Input**
+- Icône loupe à gauche
+- Placeholder : "Rechercher..."
+- Bouton clear à droite (quand rempli)
+
+---
+
+# 🎨 Guide Figma - Composants (suite)
+
+## Cards
+
+**Information Card**
+- Background : Blanc
+- Border-radius : 12px
+- Shadow : 0px 2px 8px rgba(0,0,0,0.1)
+- Padding : 16px
+
+**Status Card**
+- Icône de statut (colorée)
+- Titre
+- Description
+- Badge de statut (success/warning/error)
+
+---
+
+# 🎨 Guide Figma - Composants (suite)
+
+## Navigation
+
+**Bottom Navigation (Mobile)**
+- 4-5 items maximum
+- Icône + Label
+- Indicateur d'élément actif (couleur + barre)
+
+**App Bar / Top Navigation**
+- Logo CEPICI à gauche
+- Titre de la page au centre
+- Icône notifications + profil à droite
+- Ombre subtile
+
+---
+
+# 🎨 Guide Figma - Écrans responsive
+
+## Mobile First (320px - 768px)
+- Layout en colonne unique
+- Bottom navigation
+- Hamburger menu pour options secondaires
+- Stack vertical des cards
+
+## Tablet (768px - 1024px)
+- Layout en 2 colonnes
+- Side navigation possible
+- Cards en grid 2x2
+
+## Desktop (1024px+)
+- Layout en 3 colonnes
+- Side navigation permanente
+- Dashboard avec widgets
+
+---
+
+# 🎨 Guide Figma - États & Interactions
+
+## États des composants à designer
+
+1. **Default** - État par défaut
+2. **Hover** - Survol (desktop)
+3. **Pressed / Active** - Cliqué
+4. **Focus** - Focus clavier
+5. **Disabled** - Désactivé
+6. **Loading** - Chargement
+7. **Error** - Erreur
+8. **Success** - Succès
+
+---
+
+# 🎨 Guide Figma - Animations
+
+## Transitions recommandées
+
+**Navigation entre pages :**
+- Slide horizontal : 300ms
+- Fade : 200ms
+
+**Apparition de modals :**
+- Scale + Fade : 250ms
+- Backdrop fade : 200ms
+
+**Feedback utilisateur :**
+- Ripple effect sur boutons
+- Skeleton loading pour les listes
+- Progress indicator pour les uploads
+
+---
+
+# 🛠️ Roadmap de développement
+
+## Phase 1 : MVP (8 semaines)
+- Setup Flutter PWA
+- Authentification utilisateur
+- Recherche de nom d'entreprise
+- Formulaire d'enregistrement basique
+- Interface admin simplifiée
+
+## Phase 2 : Fonctionnalités avancées (6 semaines)
+- Intégration paiement
+- Suivi de dossier en temps réel
+- Notifications push
+- Centre d'aide complet
+
+---
+
+# 🛠️ Roadmap (suite)
+
+## Phase 3 : Optimisations (4 semaines)
+- Mode offline complet
+- Analytics et monitoring
+- Tests utilisateurs et ajustements
+- Optimisation des performances
+
+## Phase 4 : Lancement (2 semaines)
+- Déploiement production
+- Formation équipe CEPICI
+- Communication et marketing
+- Support post-lancement
+
+**Durée totale estimée : 20 semaines (5 mois)**
+
+---
+
+# 💰 Estimation budgétaire
+
+## Développement
+- **Frontend Flutter PWA** : 12-15 jours dev
+- **Backend API** : 8-10 jours dev
+- **Intégrations (Paiement, SMS)** : 5 jours
+- **UI/UX Design (Figma)** : 5-7 jours
+- **Tests & QA** : 5 jours
+
+## Infrastructure (mensuel)
+- Hébergement cloud : 50-100 USD/mois
+- Base de données : 30-50 USD/mois
+- Services tiers (SMS, Email) : 20-40 USD/mois
+
+---
+
+# 📊 KPIs de succès
+
+## Métriques à suivre
+
+**Adoption :**
+- Nombre d'utilisateurs enregistrés
+- Nombre de recherches de noms effectuées
+- Taux de conversion (recherche → enregistrement)
+
+**Performance :**
+- Temps moyen de création d'un dossier
+- Réduction du délai d'enregistrement
+- Taux de satisfaction utilisateur
+
+**Business :**
+- Nombre d'entreprises enregistrées via l'app
+- Revenus générés
+- Coût par acquisition
+
+---
+
+# 🔒 Sécurité & Conformité
+
+## Mesures de sécurité
+
+✅ **Authentification forte** (2FA via SMS)
+✅ **Chiffrement des données** (TLS/SSL)
+✅ **Stockage sécurisé** des documents
+✅ **Audit trail** complet des actions
+✅ **Conformité RGPD** (si applicable)
+✅ **Backup automatique** quotidien
+✅ **Gestion des permissions** par rôle
+
+---
+
+# 🎯 Avantages compétitifs
+
+## Pourquoi CEPICI Digital se démarque ?
+
+✅ **First mover** en Côte d'Ivoire
+✅ **Approche mobile-first** (PWA)
+✅ **Offline-ready** pour zones à faible connexion
+✅ **Intégration paiement local** (Mobile Money)
+✅ **Multilingue** (Français / Anglais)
+✅ **Support client intégré**
+✅ **Mises à jour continues** sans passer par les stores
+
+---
+
+# 📱 Checklist technique Flutter PWA
+
+## Configuration initiale
+
+```bash
+# Activer le support web
+flutter channel stable
+flutter upgrade
+flutter config --enable-web
+
+# Créer le projet
+flutter create cepici_digital
+cd cepici_digital
+
+# Tester sur Chrome
+flutter run -d chrome
+
+# Build pour production
+flutter build web --release
+```
+
+---
+
+# 📱 Checklist technique (suite)
+
+## Fichiers PWA essentiels
+
+**web/manifest.json :**
+```json
+{
+  "name": "CEPICI Digital",
+  "short_name": "CEPICI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4CAF50",
+  "theme_color": "#1B5E20",
+  "orientation": "portrait-primary",
+  "icons": [...]
+}
+```
+
+---
+
+# 📱 Packages Flutter recommandés
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  provider: ^6.0.0
+  # ou riverpod: ^2.0.0
+  
+  # Navigation
+  go_router: ^13.0.0
+  
+  # Network
+  dio: ^5.0.0
+  connectivity_plus: ^5.0.0
+  
+  # Storage
+  shared_preferences: ^2.0.0
+  flutter_secure_storage: ^9.0.0
+  
+  # UI
+  flutter_svg: ^2.0.0
+  cached_network_image: ^3.3.0
+  shimmer: ^3.0.0
+```
+
+---
+
+# 📱 Packages Flutter (suite)
+
+```yaml
+  # Forms & Validation
+  flutter_form_builder: ^9.0.0
+  form_builder_validators: ^9.0.0
+  
+  # File handling
+  file_picker: ^6.0.0
+  image_picker: ^1.0.0
+  
+  # Notifications
+  firebase_messaging: ^14.0.0
+  flutter_local_notifications: ^16.0.0
+  
+  # Payment
+  flutter_paystack: ^1.0.0
+  # (adapter selon l'agrégateur choisi)
+  
+  # Utils
+  intl: ^0.18.0
+  url_launcher: ^6.0.0
+```
+
+---
+
+# 🎨 Structure du projet Flutter
+
+```
+lib/
+├── main.dart
+├── app/
+│   ├── routes/
+│   ├── theme/
+│   └── constants/
+├── features/
+│   ├── auth/
+│   ├── home/
+│   ├── search/
+│   ├── registration/
+│   ├── tracking/
+│   └── profile/
+├── shared/
+│   ├── widgets/
+│   ├── models/
+│   └── services/
+└── core/
+    ├── network/
+    ├── storage/
+    └── utils/
+```
+
+---
+
+# 🔧 Configuration Firebase (optionnel)
+
+## Services Firebase recommandés
+
+- **Authentication** - Gestion des utilisateurs
+- **Firestore** - Base de données temps réel
+- **Cloud Storage** - Stockage des documents
+- **Cloud Functions** - Logique backend
+- **Cloud Messaging** - Notifications push
+- **Analytics** - Suivi d'utilisation
+- **Crashlytics** - Monitoring des erreurs
+
+---
+
+# 🚀 Déploiement
+
+## Options d'hébergement
+
+**Pour la PWA :**
+- Firebase Hosting (Gratuit tier généreux)
+- Netlify
+- Vercel
+- GitHub Pages
+
+**Pour le Backend :**
+- Firebase Functions
+- Heroku
+- DigitalOcean
+- AWS / Google Cloud
+
+---
+
+# �️ Déploiement GitHub Pages
+
+1. `npm install -g @marp-team/marp-cli`
+2. `marp prez.mdf --html --output docs/index.html`
+3. `touch docs/.nojekyll` (empêche le traitement Jekyll)
+4. Committer `docs/` puis pousser sur `main`
+5. Activer GitHub Pages sur `main` > dossier `/docs`
+
+**Automatisation (optionnelle)** : ajouter un workflow GitHub Actions qui exécute `marp prez.mdf --html --output docs/index.html` à chaque push.
+
+---
+
+# �📚 Ressources et références
+
+## Documentation
+- [Flutter Documentation](https://flutter.dev)
+- [PWA Guide](https://web.dev/progressive-web-apps)
+- [Material Design 3](https://m3.material.io)
+
+## Inspiration design
+- Dribbble : rechercher "government app"
+- Behance : "business registration"
+- Google Play : Ghana RGD, Sénégal Services
+- [Prototype interactif (Figma)](https://ninth-sepia-54150790.figma.site/)
+
+## Agrégateurs de paiement
+- CinetPay : cinetpay.com
+- KkiaPay : kkiapay.me
+- FeexPay : feexpay.me
+
+---
+
+# 🤝 Prochaines étapes
+
+## Pour démarrer le projet
+
+1. ✅ **Validation du concept** avec le CEPICI
+2. 📐 **Création des maquettes Figma** complètes
+3. 👨‍💻 **Recrutement de l'équipe de développement**
+4. 🏗️ **Setup de l'infrastructure technique**
+5. 🚀 **Développement du MVP**
+6. 🧪 **Tests utilisateurs avec entrepreneurs**
+7. 📱 **Lancement progressif** (beta → production)
+8. 📊 **Monitoring et amélioration continue**
+
+---
+
+# 💡 Points d'attention
+
+## Défis à anticiper
+
+⚠️ **Connexion internet variable** - Optimiser le mode offline
+⚠️ **Adoption utilisateur** - Prévoir un bon onboarding
+⚠️ **Intégration avec systèmes existants** - API CEPICI
+⚠️ **Support multilingue** - Français + Anglais minimum
+⚠️ **Alphabétisation digitale** - Interface très intuitive
+⚠️ **Confiance** - Sécurité et transparence
+
+---
+
+# 🌟 Vision à long terme
+
+## Au-delà de l'enregistrement
+
+- 🔄 **Renouvellements automatiques** des entreprises
+- 💼 **Marketplace de services** (juridique, comptable...)
+- 📈 **Analytics pour entrepreneurs** (statistiques sectorielles)
+- 🤝 **Mise en relation** investisseurs / entrepreneurs
+- 🌍 **Extension régionale** (CEDEAO)
+- 🎓 **Formations en ligne** pour entrepreneurs
+- 🏆 **Gamification** (badges, achievements)
+
+---
+
+<!-- _class: lead -->
+
+# Merci ! 🙏
+
+## Questions ?
+
+### Contacts
+📧 Email : contact@cepici-digital.ci
+📱 WhatsApp : +225 XX XX XX XX XX
+🌐 Web : www.cepici-digital.ci
+
+---
+
+<!-- _class: lead -->
+
+# Annexe : Guide détaillé Figma
+
+## Instructions pour la création des écrans
+
+(Slides suivantes)
+
+---
+
+# 📐 Figma : Setup du fichier
+
+## Structure recommandée
+
+```
+CEPICI Digital - Design System
+├── 🎨 Cover
+├── 📋 Project Info & Guidelines
+├── 🎯 Design System
+│   ├── Colors
+│   ├── Typography
+│   ├── Icons
+│   ├── Spacing & Grid
+│   └── Components
+├── 📱 Screens - Mobile
+│   ├── Onboarding
+│   ├── Auth
+│   ├── Home
+│   └── ...
+└── 💻 Screens - Desktop (optionnel)
+```
+
+---
+
+# 📐 Figma : Grille et espacement
+
+## Système 8pt Grid
+
+**Espacement recommandé :**
+- **XS** : 4px
+- **S** : 8px
+- **M** : 16px
+- **L** : 24px
+- **XL** : 32px
+- **XXL** : 48px
+
+**Margins mobiles :** 16px de chaque côté
+**Margins desktop :** 24-32px de chaque côté
+
+---
+
+# 📐 Figma : Frame sizes
+
+## Artboards recommandés
+
+**Mobile :**
+- iPhone 14 Pro : 393 x 852
+- Samsung Galaxy S23 : 360 x 800
+- Generic Mobile : 375 x 812
+
+**Tablet :**
+- iPad Pro 11" : 834 x 1194
+
+**Desktop :**
+- Desktop HD : 1440 x 1024
+- Desktop Full HD : 1920 x 1080
+
+---
+
+# 🎨 Figma : Page Onboarding - Slide 1
+
+## Frame : 375 x 812 (Mobile)
+
+**Contenu :**
+- **Image** (350 x 300) : Illustration vectorielle
+  - Concept : Entrepreneur avec documents
+  - Position : Centré, top margin 80px
+  
+- **Titre** (H1) : "Créez votre entreprise en quelques clics"
+  - Position : Sous l'image, margin 32px
+  
+- **Description** : Texte explicatif (2-3 lignes)
+  - Position : Sous titre, margin 16px
+  
+- **Indicateur** : Dots (1/4 actif)
+- **Bouton "Suivant"** : Bottom, margin 32px
+
+---
+
+# 🎨 Figma : Page Login
+
+## Composants principaux
+
+**En-tête (200px height) :**
+- Logo CEPICI centré
+- Tagline : "Votre guichet unique en ligne"
+
+**Formulaire (Card) :**
+- Input : Téléphone / Email (avec icône)
+- Input : Mot de passe (avec œil show/hide)
+- Checkbox : Se souvenir de moi
+- Link : Mot de passe oublié ? (aligné à droite)
+- Button Primary : "Se connecter" (full width)
+- Divider : "ou"
+- Social buttons (Google, Apple) - outline
+
+**Footer :**
+- Link : "Pas encore de compte ? S'inscrire"
+
+---
+
+# 🎨 Figma : Dashboard
+
+## Layout en Grid
+
+**Header (80px height) :**
+- Greeting : "Bonjour, [Nom]" + avatar
+- Notification icon (avec badge)
+
+**Quick Actions (Section 1) :**
+- Grid 2x2 de cards (avec icônes)
+  - Rechercher un nom
+  - Créer entreprise
+  - Suivre dossier
+  - Paiement
+
+**Dossiers en cours (Section 2) :**
+- Liste de cards horizontales
+  - Nom entreprise
+  - Statut (badge coloré)
+  - Date
+  - Action (voir détails)
+
+---
+
+# 🎨 Figma : Recherche de nom
+
+## Composants
+
+**Header avec retour** (60px)
+
+**Search Bar (64px height) :**
+- Input avec loupe
+- Placeholder : "Nom de l'entreprise..."
+- Bouton "Rechercher"
+
+**Filtres (optionnels) :**
+- Chips : Type entreprise, Secteur
+
+**Résultats (Cards) :**
+- **Disponible** (vert)
+  - Check icon
+  - Nom
+  - "Disponible"
+  - Button : "Réserver maintenant"
+  
+- **Non disponible** (rouge)
+  - X icon
+  - Nom
+  - "Déjà enregistré"
+
+---
+
+# 🎨 Figma : Formulaire d'enregistrement
+
+## Multi-step avec Stepper
+
+**Stepper (Top, 60px height) :**
+- Numérotation : 1, 2, 3, 4, 5
+- Ligne de progression
+- Labels sous les numéros
+
+**Contenu (Scrollable) :**
+- Titre de l'étape (H2)
+- Formulaire adapté à l'étape
+- Aide contextuelle (? icons)
+
+**Footer (Fixed, 80px height) :**
+- Button Secondary : "Précédent" (gauche)
+- Button Primary : "Suivant" / "Soumettre" (droite)
+- Indicateur de sauvegarde auto
+
+---
+
+# 🎨 Figma : Tracking de dossier
+
+## Timeline verticale
+
+**Card par étape :**
+- Icône de statut (✅ / ⏳ / ❌)
+- Titre de l'étape
+- Date/Heure
+- Description
+- Connecteur vertical entre cards
+
+**États visuels :**
+- **Complété** : Icône verte + texte vert
+- **En cours** : Icône orange + animation pulse
+- **À venir** : Icône grise
+- **Rejeté** : Icône rouge + message d'erreur
+
+**Actions (Bottom) :**
+- Button : "Télécharger le certificat" (si complété)
+- Button : "Contacter le support"
+
+---
+
+# 🎨 Figma : Paiement
+
+## Selection de méthode
+
+**Options (Cards cliquables) :**
+- Mobile Money
+  - Logo opérateur
+  - Nom
+  - Radio button
+- Carte bancaire
+  - Icônes VISA/Mastercard
+  - Radio button
+
+**Formulaire selon sélection :**
+- Mobile Money :
+  - Input : Numéro
+  - Info : "Vous recevrez un prompt"
+  
+- Carte :
+  - Input : Numéro carte
+  - Input : Date expiration + CVV
+  - Input : Nom sur carte
+
+**Récapitulatif (Card) :**
+- Montant
+- Frais
+- Total
+- Button : "Payer [Montant]"
+
+---
+
+# 🎨 Figma : Profil utilisateur
+
+## Layout avec tabs
+
+**Header (180px) :**
+- Background gradient vert
+- Avatar centré (80x80)
+- Nom
+- Email
+- Button : Éditer profil
+
+**Tabs :**
+- Informations
+- Mes entreprises
+- Paramètres
+
+**Contenu selon tab :**
+- Liste de champs (Label + Value)
+- Cards d'entreprises
+- Toggles de paramètres
+
+---
+
+# 🎨 Figma : Composants réutilisables
+
+## Liste des composants à créer
+
+1. **Buttons** (Primary, Secondary, Text, Icon)
+2. **Input Fields** (Text, Number, Phone, Email, Password)
+3. **Cards** (Info, Status, Action)
+4. **List Items** (Simple, With avatar, With action)
+5. **Badges** (Status, Count)
+6. **Modals** (Alert, Confirm, Info)
+7. **Bottom Sheet**
+8. **Navigation** (Bottom nav, Top bar)
+9. **Stepper** (Linear, Non-linear)
+10. **Empty States**
+11. **Loading States** (Skeleton, Spinner)
+
+---
+
+# 🎨 Figma : États et variantes
+
+## Pour chaque composant
+
+**Button :**
+- Variants : Default, Hover, Pressed, Disabled, Loading
+- Props : Size (S, M, L), Type (Primary, Secondary)
+
+**Input :**
+- Variants : Default, Focus, Filled, Error, Disabled
+- Props : Type (text, email, phone...), With icon
+
+**Card :**
+- Variants : Default, Hover, Selected
+- Props : With shadow, Flat
+
+**Utiliser Auto Layout pour responsive**
+
+---
+
+# 🎨 Figma : Prototypage
+
+## Interactions à créer
+
+1. **Navigation :**
+   - Onboarding → Login → Dashboard
+   - Bottom nav entre sections
+
+2. **Recherche :**
+   - Input → Résultats (delay 300ms)
+   - Card résultat → Modal détails
+
+3. **Formulaire :**
+   - Stepper navigation
+   - Validation → Success modal
+
+4. **Animations :**
+   - Button press : Scale 0.95
+   - Modal appear : Fade + Scale
+   - Loading : Spinner rotation
+
+---
+
+# 🎨 Figma : Export pour développeurs
+
+## Préparation des assets
+
+**Icônes :**
+- Format : SVG
+- Taille : 24x24, 32x32
+- Naming : ic_[nom]_[variant].svg
+
+**Images :**
+- Format : WebP ou PNG
+- Résolutions : @1x, @2x, @3x
+- Naming : img_[nom]_[size].webp
+
+**Export from Figma :**
+- Utiliser les exports natifs
+- Ou plugins : Figma to Flutter, Figma to Code
+
+---
+
+# 🎨 Figma : Collaboration
+
+## Bonnes pratiques
+
+✅ **Nommage cohérent** des layers
+✅ **Organisation** en frames et sections
+✅ **Commentaires** pour clarifications
+✅ **Versions** nommées et datées
+✅ **Composants** bien documentés
+✅ **Design tokens** extraits
+✅ **Handoff** avec annotations
+
+**Outils complémentaires :**
+- Figma DevMode pour les devs
+- Plugins : Stark (accessibilité), Contrast
+- Zeplin ou Figma Inspect
+
+---
+
+# 🛠️ Instructions de développement
+
+## Configuration initiale du projet
+
+```bash
+# Installation Flutter si nécessaire
+git clone https://github.com/flutter/flutter.git -b stable
+export PATH="$PATH:`pwd`/flutter/bin"
+flutter doctor
+
+# Création du projet
+flutter create --org ci.cepici cepici_digital
+cd cepici_digital
+
+# Activer web support
+flutter config --enable-web
+
+# Ajouter les dépendances dans pubspec.yaml
+# (voir slide précédente avec packages)
+
+flutter pub get
+```
+
+---
+
+# 🛠️ Configuration PWA
+
+## Modifier web/index.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEPICI Digital</title>
+  <meta name="description" content="Créez votre entreprise en ligne">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1B5E20">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+  <script src="flutter.js" defer></script>
+</body>
+</html>
+```
+
+---
+
+# 🛠️ Manifest.json complet
+
+```json
+{
+  "name": "CEPICI Digital - Enregistrement d'entreprises",
+  "short_name": "CEPICI Digital",
+  "description": "Créez et enregistrez votre entreprise en ligne",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1B5E20",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "government"],
+  "lang": "fr-CI",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
+```
+
+---
+
+# 🛠️ Service Worker (optionnel)
+
+## Pour cache avancé
+
+```javascript
+// web/flutter_service_worker.js (généré auto)
+// Personnalisation optionnelle :
+
+const CACHE_NAME = 'cepici-digital-v1';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/flutter.js',
+  '/main.dart.js',
+  // Ajouter assets critiques
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
+```
+
+---
+
+# 🛠️ Structure du code - Exemple
+
+## main.dart
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'app/routes/app_router.dart';
+import 'app/theme/app_theme.dart';
+
+void main() {
+  runApp(const CepiciDigitalApp());
+}
+
+class CepiciDigitalApp extends StatelessWidget {
+  const CepiciDigitalApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      title: 'CEPICI Digital',
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      routerConfig: AppRouter.router,
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+```
+
+---
+
+# 🛠️ Theme configuration
+
+## app/theme/app_theme.dart
+
+```dart
+class AppTheme {
+  static const Color primaryGreen = Color(0xFF4CAF50);
+  static const Color darkGreen = Color(0xFF1B5E20);
+  static const Color accentOrange = Color(0xFFFF9800);
+  
+  static ThemeData get lightTheme {
+    return ThemeData(
+      useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: primaryGreen,
+        brightness: Brightness.light,
+      ),
+      appBarTheme: AppBarTheme(
+        backgroundColor: primaryGreen,
+        foregroundColor: Colors.white,
+      ),
+      // Plus de config...
+    );
+  }
+}
+```
+
+---
+
+# 🛠️ Navigation avec go_router
+
+```dart
+final router = GoRouter(
+  routes: [
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const OnboardingScreen(),
+    ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: '/home',
+      builder: (context, state) => const HomeScreen(),
+      routes: [
+        GoRoute(
+          path: 'search',
+          builder: (context, state) => const SearchNameScreen(),
+        ),
+        // Autres routes...
+      ],
+    ),
+  ],
+);
+```
+
+---
+
+# 🛠️ Build et déploiement
+
+## Build production
+
+```bash
+# Build optimisé
+flutter build web --release --web-renderer canvaskit
+
+# Ou pour meilleure compatibilité (mais plus lourd)
+flutter build web --release --web-renderer html
+
+# Build se trouve dans build/web/
+```
+
+## Déploiement Firebase Hosting
+
+```bash
+npm install -g firebase-tools
+firebase login
+firebase init hosting
+# Sélectionner build/web comme public directory
+firebase deploy
+```
+
+---
+
+# 📊 Monitoring post-lancement
+
+## Outils recommandés
+
+**Analytics :**
+- Firebase Analytics
+- Google Analytics 4
+- Mixpanel
+
+**Performance :**
+- Firebase Performance Monitoring
+- Lighthouse CI
+- Web Vitals
+
+**Crash Reporting :**
+- Firebase Crashlytics
+- Sentry
+
+**User Feedback :**
+- In-app surveys
+- Hotjar / Fullstory
+
+---
+
+# ✅ Checklist finale avant lancement
+
+## Technique
+
+- [ ] Tests sur tous les navigateurs (Chrome, Safari, Firefox)
+- [ ] Tests sur différents appareils (mobile, tablet, desktop)
+- [ ] Performance optimale (Lighthouse score > 90)
+- [ ] Mode offline fonctionnel
+- [ ] Icônes PWA de toutes tailles
+- [ ] Manifest.json correctement configuré
+- [ ] Service worker actif
+- [ ] HTTPS activé
+
+---
+
+# ✅ Checklist finale (suite)
+
+## Contenu
+
+- [ ] Tous les textes validés
+- [ ] Traductions FR/EN complètes
+- [ ] CGU et politique de confidentialité
+- [ ] FAQ à jour
+- [ ] Guides utilisateurs rédigés
+- [ ] Support client opérationnel
+
+## Marketing
+
+- [ ] Landing page prête
+- [ ] Vidéo démo
+- [ ] Screenshots stores
+- [ ] Plan de communication
+
+---
+
+<!-- _class: lead -->
+🚀 Roadmap (20 semaines)
+Phase 1 (8 sem): MVP - Auth, Recherche, Formulaire basique, Admin
+Phase 2 (6 sem): Paiement, Suivi temps réel, Notifications, Support
+Phase 3 (4 sem): Mode offline, Analytics, Tests, Optimisations
+Phase 4 (2 sem): Déploiement, Formation, Marketing
+💰 Budget estimé
+Développement: 35-42 jours (Frontend 12-15j, Backend 8-10j, Design 5-7j, Tests 5j)
+Infrastructure: 100-190 USD/mois (Hébergement + BDD + Services SMS/Email)
+# 🎉 Bonne chance avec le projet !
+
+## CEPICI Digital va révolutionner l'entrepreneuriat en Côte d'Ivoire
+
+### 🚀 Let's build something amazing!
+
+---
